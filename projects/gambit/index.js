@@ -3,6 +3,7 @@ const { sumTokens2 } = require("../helper/unwrapLPs");
 const { staking } = require("../helper/staking");
 
 const SimpleGToken = "0x0729e806f57CE71dA4464c6B2d313E517f41560b"; // SimpleGToken
+const Treasury = "0x1fb8611064a09469F808263C398623A86e7Aa883"; // Treasury
 
 const tokens = {
     era: {
@@ -14,6 +15,7 @@ async function eraTvl(_, _b, _cb, { api }) {
     // timestamp, block, chainBlocks, chainApi
     const tokensAndOwners = [
         [tokens.era.USDC, SimpleGToken],
+        [tokens.era.USDC, Treasury],
     ];
     return sumTokens2({ api, tokensAndOwners });
 }
