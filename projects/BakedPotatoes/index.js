@@ -7,6 +7,8 @@ async function tvl(time, ethBlock, { dogechain: block }) {
 }
 
 module.exports = {
+
+
   methodology: `We count the WDOGE on ${contract}`,
   dogechain: {
     tvl
