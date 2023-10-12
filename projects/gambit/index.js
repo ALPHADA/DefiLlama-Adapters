@@ -23,7 +23,6 @@ async function eraTvl(_, _b, _cb, { api }) {
 module.exports = {
     methodology: `Count the USDC that has been deposited on Gambit`,
     era: {
-        // staking: staking('contract', tokens.era.CNG),
         tvl: eraTvl,
     },
 };
